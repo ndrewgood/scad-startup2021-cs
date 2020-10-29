@@ -2,6 +2,7 @@
 import '../styles/main.scss';
 // Import any additional modules you want to include below \/
 
+import './sketch.js'
 
 // \/ All of your javascript should go here \/
 
