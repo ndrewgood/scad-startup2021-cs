@@ -1,10 +1,28 @@
 // This is where your styles can go, import any other scss or css files here or write your own style directly below
 
+@font-face {
+  src: url('../fonts/Circular/CircularStd-Book.ttf');
+  font-family: 'Circular';
+}
+
+@font-face {
+  src: url('../fonts/Circular/CircularStd-BookItalic.ttf');
+  font-family: 'Circular';
+  font-style: italic;
+}
+
+@font-face {
+  src: url('../fonts/Circular/CircularStd-Bold.ttf');
+  font-family: 'Circular';
+  font-weight: bold;
+}
+
 body,
 body * {
   box-sizing: border-box;
   margin: 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Circular';
+  color: #3D3D3D;
   display: flex;
 }
 
@@ -15,15 +33,29 @@ body * {
 
 #cb-right {
   background-color: #1E1E1E;
+  @media only screen and (max-width: 900px) {
+    width: 100vw;
+  }
 }
 
 #cb-left {
   background-color: white;
   display: block;
+  @media only screen and (max-width: 900px) {
+    display: none;
+  }
 }
 
 #startup-logo {
-  width: 50%;
+  width: 25%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 75%;
+  @media only screen and (max-width: 900px) {
+    left: 50%;
+    width: 40%;
+  }
 }
 
 #header {
@@ -66,13 +98,24 @@ body * {
   padding-right: 40px;
 }
 
+.arrow {
+  transition: .3s;
+  position: absolute;
+  padding-left: 0px;
+}
+
 #link-container {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 90%;
   a {
     margin: 0;
     text-decoration: none;
-    color: black;
+    color: #3D3D3D;
+  }
+  a:hover {
+    .arrow {
+      padding-left: 7px;
+    }
   }
 }

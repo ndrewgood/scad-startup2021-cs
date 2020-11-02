@@ -1,51 +1,64 @@
-let xoff = 0.0;
-let num = 12;
+const containerElement = document.getElementById('p5-canvas');
 
-function setup() {
-  createCanvas(windowWidth/2, windowHeight);
-}
+import p5 from 'p5';
 
-function draw() {
-    background(0);
-    noFill();
-    // blendMode(HARD_LIGHT);
-    let colorMap = map(sin(xoff), -1, 1, 0, 255);
-    stroke(colorMap,0,255);
-    strokeWeight(3);
-    
-    for (let i = 0; i < num; i++){
+const sketch = (p) => {
 
-      beginShape();
-    
-      let yoff = 0;
-    
-      for (let y = 0; y <= (windowHeight+20); y += 20) {
-        
-        let noiseVar = map(noise(yoff, xoff/2), 0, 1, 250, 400);
+  let xoff = 0.0;
+  let num = 16;
 
-        let x = (sin((xoff+i*.2) + (yoff * 4))*50) + noiseVar;
-
-        vertex(x+(i*10), y);
-
-        yoff += 0.02;
-      }
-
-      xoff += 0.0003;
-
-      vertex(-10, windowHeight+10);
-      vertex(-10, -10);
-      vertex(200, -10);
-      endShape(CLOSE);
+  p.setup = function() {
+    if (p.windowWidth >= 900){
+      p.createCanvas(p.windowWidth/2, p.windowHeight);
+    } else {
+      p.createCanvas(p.windowWidth, p.windowHeight);
     }
-  
-}
-
-function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
-    yvalues = new Array(floor(windowWidth / dotSpacing));
-
+    
+    
   }
 
-// new p5(sketch, 'p5-canvas');
+  p.draw = function() {
+      
+      p.noFill();
+      p.background(30);
+      // p.blendMode(p.ADD);
+      let colorMap = p.map(p.sin(xoff*1.5), -1, 1, 0, 255);
+      p.stroke(colorMap,0,255, 200);
+      p.strokeWeight(3);
+      
+      for (let i = 0; i < num; i++){
 
-export default sketch
+        p.beginShape();
+      
+        let yoff = 0;
+      
+        for (let y = 0; y <= (p.windowHeight+25); y += 25) {
+          
+          let noiseVar = p.map(p.noise(yoff, xoff/2), 0, 1, (p.windowWidth/4)-100, (p.windowWidth/4));
+
+          let x = (p.sin((xoff+i*.15) + ((yoff * 4)))*60) + noiseVar;
+
+          p.vertex(x+(i*10), y);
+
+          yoff += 0.02;
+        }
+
+        xoff += 0.0003;
+
+        p.vertex(-10, p.windowHeight+10);
+        p.vertex(-10, -10);
+        p.vertex(200, -10);
+        p.endShape("CLOSE");
+      }
+    
+  }
+
+  p.windowResized = function() {
+    if (p.windowWidth >= 900){
+      p.resizeCanvas(p.windowWidth/2, p.windowHeight);
+    } else {
+      p.resizeCanvas(p.windowWidth, p.windowHeight);
+    }    }
+}
+
+new p5(sketch, 'p5-canvas');
