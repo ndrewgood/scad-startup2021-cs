@@ -1,5 +1,7 @@
 const containerElement = document.getElementById('p5-canvas');
 
+
+
 import p5 from 'p5';
 
 const sketch = (p) => {
@@ -10,8 +12,10 @@ const sketch = (p) => {
   p.setup = function() {
     if (p.windowWidth >= 900){
       p.createCanvas(p.windowWidth/2, p.windowHeight);
+      window.devicePixelRatio=1;
     } else {
       p.createCanvas(p.windowWidth, p.windowHeight);
+      window.devicePixelRatio=2;
     }
     
     
@@ -61,4 +65,4 @@ const sketch = (p) => {
     }    }
 }
 
-new p5(sketch, 'p5-canvas');
+new p5(sketch, containerElement);

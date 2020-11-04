@@ -6,3 +6,4 @@ import './sketch.js'
 
 // \/ All of your javascript should go here \/
 
+let cd = countdown(507314280000, null, countdown.DAYS);
