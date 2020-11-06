@@ -78,7 +78,7 @@ const config = {
             options: {
               name: '[name].[ext]',
               outputPath: 'img/',
-              publicPath: '../img/'
+              publicPath: 'img/'
             }
           }
         ]
