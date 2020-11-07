@@ -14,7 +14,7 @@ const sketch = (p) => {
       p.createCanvas(p.windowWidth/2, p.windowHeight);
       window.devicePixelRatio=1;
     } else {
-      p.createCanvas(p.windowWidth, p.windowHeight);
+      p.createCanvas(p.windowWidth, p.windowHeight*.7);
       window.devicePixelRatio=2;
     }
     
@@ -22,10 +22,18 @@ const sketch = (p) => {
   }
 
   p.draw = function() {
+    let xMobileOff = 0;
+
+    if (p.windowWidth <= 900){
+      xMobileOff = 150;
+    } else {
+      xMobileOff = 0;
+    }
       
       p.noFill();
       p.background(30);
       // p.blendMode(p.ADD);
+      
       let colorMap = p.map(p.sin(xoff*1.5), -1, 1, 0, 255);
       p.stroke(colorMap,0,255, 200);
       p.strokeWeight(3);
@@ -40,7 +48,7 @@ const sketch = (p) => {
           
           let noiseVar = p.map(p.noise(yoff, xoff/2), 0, 1, (p.windowWidth/4)-100, (p.windowWidth/4));
 
-          let x = (p.sin((xoff+i*.15) + ((yoff * 4)))*60) + noiseVar;
+          let x = (p.sin((xoff+i*.15) + ((yoff * 4)))*60) + noiseVar + xMobileOff;
 
           p.vertex(x+(i*10), y);
 
@@ -61,7 +69,7 @@ const sketch = (p) => {
     if (p.windowWidth >= 900){
       p.resizeCanvas(p.windowWidth/2, p.windowHeight);
     } else {
-      p.resizeCanvas(p.windowWidth, p.windowHeight);
+      p.resizeCanvas(p.windowWidth, p.windowHeight*.7);
     }    }
 }
 

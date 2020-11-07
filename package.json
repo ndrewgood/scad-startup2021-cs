@@ -39,6 +39,7 @@
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
+    "countdown": "^2.6.0",
     "p5": "^1.1.9"
   }
 }

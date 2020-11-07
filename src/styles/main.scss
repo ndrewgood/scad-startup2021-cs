@@ -34,6 +34,7 @@ body * {
 #cb-right {
   background-color: #1E1E1E;
   @media only screen and (max-width: 900px) {
+    height: 70vh !important;
     width: 100vw;
   }
 }
@@ -53,6 +54,7 @@ body * {
   top: 50%;
   left: 75%;
   @media only screen and (max-width: 900px) {
+    top: 20%;
     left: 50%;
     width: 40%;
   }
@@ -86,8 +88,45 @@ body * {
   font-size: 50px;
 }
 
+#countdown-container {
+  padding-top: 15px;
+}
+
 .countdown {
   font-size: 20px;
+  display: inline-flex;
+  margin: auto;
+  vertical-align: middle;
+  p {
+    padding-top: 15px;
+  }
+}
+
+
+.countdown-num {
+  padding: 0 7px 0 15px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+#days, #hours, #minutes, #seconds {
+  color: #D13F91 !important;
+}
+
+#days {
+  color: #B61F9F;
+}
+
+#hours {
+  color: #7039BF;
+}
+
+#minutes {
+  color: #4C46D0;
+}
+
+#seconds {
+  color: #1D57E5;
 }
 
 #footer {
@@ -117,5 +156,12 @@ body * {
     .arrow {
       padding-left: 7px;
     }
+  }
+}
+
+#cb-mobile {
+  display: none;
+  @media only screen and (max-width: 900px) {
+    display: flex;
   }
 }

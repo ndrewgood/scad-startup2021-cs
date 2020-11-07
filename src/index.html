@@ -16,7 +16,9 @@
       </div>
       <div id="center">
         <p class="emoji">🤫</p>
-        <p class="countdown">52 days  17 hours  20 minutes  35 seconds</p>
+        <div id="countdown-container">
+          <div class="countdown"><span id="days" class="countdown-num"></span><p>days</p><span id="hours" class="countdown-num"></span><p>hours</p><span id="minutes" class="countdown-num"></span><p>minutes</p><span id="seconds" class="countdown-num"></span><p>seconds</p></div>
+        </div>
       </div>
       <div id="footer">
         <div id="link-container">
@@ -30,10 +32,9 @@
       <img src="./images/startup-logo.svg" alt="StartUp Logo" id="startup-logo">
       <div id="p5-canvas"></div>
     </main>
+    <main id="cb-mobile" class="container-block"></main>
   </body>
   <footer>
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/countdown/2.6.0/countdown.min.js" integrity="sha512-FkM4ZGExuYz4rILLbNzw8f3HxTN9EKdXrQYcYfdluxJBjRLthYPxxZixV/787qjN3JLs2607yN5XknR/cQMU8w==" crossorigin="anonymous"></script>
     <script type="module" src="../src/scripts/index.js"></script>
   </footer>
 </html>
