@@ -206,10 +206,10 @@ body * {
   transform: translate(-50%, 0);
   padding: 30px;
   left: 50%;
-  height: calc(100vh - 250px);
+  height: calc(100% - 220px);
   justify-content: space-evenly;
   .mobile-startup-logo {
-    height: 150px;
+    height: 100px;
   }
   .emoji {
     font-size: 35px;
