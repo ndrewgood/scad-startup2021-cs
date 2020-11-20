@@ -3,6 +3,8 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const autoprefixer = require('autoprefixer');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+
 
 const config = {
   entry: './src/scripts/index.js',
@@ -108,7 +110,8 @@ const config = {
     new MiniCssExtractPlugin({
       filename: 'styles/[name].css',
       chunkFilename: 'styles/chunks/[id].css'
-    })
+    }),
+    new FaviconsWebpackPlugin('./src/images/favicon-32x32.png')
   ]
 };
 
