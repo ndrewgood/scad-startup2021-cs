@@ -15,6 +15,11 @@ setInterval(() => {
     document.getElementById("hours").innerHTML = cd.hours;
     document.getElementById("minutes").innerHTML = cd.minutes;
     document.getElementById("seconds").innerHTML = cd.seconds;
+
+    document.getElementById("m-days").innerHTML = cd.days;
+    document.getElementById("m-hours").innerHTML = cd.hours;
+    document.getElementById("m-minutes").innerHTML = cd.minutes;
+    document.getElementById("m-seconds").innerHTML = cd.seconds;
 }, 1000);
 
 

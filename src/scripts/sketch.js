@@ -14,7 +14,7 @@ const sketch = (p) => {
       p.createCanvas(p.windowWidth/2, p.windowHeight);
       window.devicePixelRatio=1;
     } else {
-      p.createCanvas(p.windowWidth, p.windowHeight*.7);
+      p.createCanvas(p.windowWidth, p.windowHeight);
       window.devicePixelRatio=2;
     }
     
@@ -25,7 +25,7 @@ const sketch = (p) => {
     let xMobileOff = 0;
 
     if (p.windowWidth <= 900){
-      xMobileOff = 150;
+      xMobileOff = 75;
     } else {
       xMobileOff = 0;
     }
@@ -69,7 +69,7 @@ const sketch = (p) => {
     if (p.windowWidth >= 900){
       p.resizeCanvas(p.windowWidth/2, p.windowHeight);
     } else {
-      p.resizeCanvas(p.windowWidth, p.windowHeight*.7);
+      p.resizeCanvas(p.windowWidth, p.windowHeight);
     }    }
 }
 

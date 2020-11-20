@@ -11,8 +11,8 @@
   <body>
     <main id="cb-left" class="container-block">
       <div id="header">
-        <a target="_blank" href="http://scadflux.com"><img src="./images/flux-logo.svg" alt="FLUX Logo" id="flux-logo"></a>
-        <a target="_blank" href="https://www.scad.edu/about/scadpro"><img src="./images/scadpro-logo.svg" alt="SCADpro Logo" id="scadpro-logo"></a>
+        <a target="_blank" href="http://scadflux.com"><img src="./images/flux-logo.svg" alt="FLUX Logo" class="flux-logo"></a>
+        <a target="_blank" href="https://www.scad.edu/about/scadpro"><img src="./images/scadpro-logo.svg" alt="SCADpro Logo" class="scadpro-logo"></a>
       </div>
       <div id="center">
         <p class="emoji">🤫</p>
@@ -29,10 +29,30 @@
       </div>
     </main>
     <main id="cb-right" class="container-block">
-      <img src="./images/startup-logo.svg" alt="StartUp Logo" id="startup-logo">
+      <img src="./images/startup-svg.svg" alt="StartUp Logo" id="startup-logo">
+      <div id="mobile-upper">
+        <img src="./images/startup-svg.svg" alt="StartUp Logo" class="mobile-startup-logo">
+        <p class="emoji">🤫</p>
+        <div class="countdown">
+          <div class="c-container"><span id="m-days" class="countdown-num"></span><p>days</p></div>
+          <div class="c-container"><span id="m-hours" class="countdown-num"></span><p>hours</p></div>
+          <div class="c-container"><span id="m-minutes" class="countdown-num"></span><p>minutes</p></div>
+          <div class="c-container"><span id="m-seconds" class="countdown-num"></span><p>seconds</p></div>
+        </div>
+      </div>
       <div id="p5-canvas"></div>
     </main>
-    <main id="cb-mobile" class="container-block"></main>
+    <main id="cb-mobile" class="container-block">
+      <div id="mobile-content">
+          <a target="_blank" href="http://instagram.com/scadflux">FLUX Instagram<div><img src="./images/arrow.svg" alt="arrow" class="arrow"></div></a>
+          <a target="_blank" href="http://scadstartup.club">StartUp 2020<div><img src="./images/arrow.svg" alt="arrow" class="arrow"></div></a>
+          <a target="_blank" href="mailto:scadflux@gmail.com">Contact Us<div><img src="./images/arrow.svg" alt="arrow" class="arrow"></div></a>
+      </div>
+      <div id="mobile-footer">
+        <a target="_blank" href="http://scadflux.com"><img src="./images/flux-logo.svg" alt="FLUX Logo" class="flux-logo"></a>
+        <a target="_blank" href="https://www.scad.edu/about/scadpro"><img src="./images/scadpro-logo.svg" alt="SCADpro Logo" class="scadpro-logo"></a>
+      </div>
+    </main>
   </body>
   <footer>
     <script type="module" src="../src/scripts/index.js"></script>

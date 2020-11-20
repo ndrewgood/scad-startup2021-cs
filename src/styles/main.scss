@@ -17,6 +17,10 @@
   font-weight: bold;
 }
 
+html {
+  background-color: rgb(30,30,30);
+}
+
 body,
 body * {
   box-sizing: border-box;
@@ -24,6 +28,9 @@ body * {
   font-family: 'Circular';
   color: #3D3D3D;
   display: flex;
+  @media only screen and (max-width: 900px) {
+    flex-direction: column;
+  }
 }
 
 .container-block {
@@ -34,7 +41,7 @@ body * {
 #cb-right {
   background-color: #1E1E1E;
   @media only screen and (max-width: 900px) {
-    height: 70vh !important;
+    height: calc(100vh - 250px) !important;
     width: 100vw;
   }
 }
@@ -54,9 +61,7 @@ body * {
   top: 50%;
   left: 75%;
   @media only screen and (max-width: 900px) {
-    top: 20%;
-    left: 50%;
-    width: 40%;
+    display: none;
   }
 }
 
@@ -68,7 +73,7 @@ body * {
   }
 }
 
-#scadpro-logo {
+.scadpro-logo {
   margin-left: 20px;
 }
 
@@ -86,6 +91,7 @@ body * {
 
 .emoji {
   font-size: 50px;
+  height: auto;
 }
 
 #countdown-container {
@@ -95,7 +101,7 @@ body * {
 .countdown {
   font-size: 20px;
   display: inline-flex;
-  margin: auto;
+  height: auto;
   vertical-align: middle;
   p {
     padding-top: 15px;
@@ -110,22 +116,10 @@ body * {
 }
 
 #days, #hours, #minutes, #seconds {
-  color: #D13F91 !important;
+  color: #D13F91;
 }
 
-#days {
-  color: #B61F9F;
-}
-
-#hours {
-  color: #7039BF;
-}
-
-#minutes {
-  color: #4C46D0;
-}
-
-#seconds {
+.seconds {
   color: #1D57E5;
 }
 
@@ -161,7 +155,88 @@ body * {
 
 #cb-mobile {
   display: none;
+  height: 220px;
+  width: 100vw;
+  background-color: white;
+  position: absolute;
+  bottom: 0px;
   @media only screen and (max-width: 900px) {
     display: flex;
+    flex-direction: column;
+  }
+}
+#mobile-content {
+  width: 100vw;
+  display: flex;
+  padding: 0 40px;
+  margin-top: 25px;
+  font-size: 20px;
+  a {
+    margin: 0;
+    display: inline-flex;
+    flex-direction: row;
+    text-decoration: none;
+    padding-bottom: 20px;
+    div {
+      margin: 0;
+      margin-left: 5px;
+    }
+  }
+}
+
+#mobile-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    flex-direction: row;
+    a {
+      margin: 0;
+    }
+    img {
+      height: 30px;
+    }
+}
+
+#mobile-upper {
+  display: none;
+  position: absolute;
+  transform: translate(-50%, 0);
+  padding: 30px;
+  left: 50%;
+  height: calc(100vh - 250px);
+  justify-content: space-evenly;
+  .mobile-startup-logo {
+    height: 150px;
+  }
+  .emoji {
+    font-size: 35px;
+  }
+  .countdown {
+    p{
+      color: white;
+      font-size: 15px;
+    }
+    .countdown-num {
+      color: white;
+      padding: 0 7px 0 0px;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    display: flex;
+  }
+}
+
+.c-container {
+  display: inline-flex;
+  flex-direction: row;
+  margin: 0;
+  p, .countdown-num {
+    margin: 0;
+  }
+  p {
+    padding-top: 20px;
   }
 }
