@@ -10,7 +10,7 @@ import countdown from 'countdown';
 
 // let cd = countdown(1612483200, null, countdown.DAYS);
 setInterval(() => {
-    let cd = countdown( new Date(2021, 2, 5), null, countdown.DAYS|countdown.HOURS|countdown.MINUTES|countdown.SECONDS );
+    let cd = countdown( new Date('February 4, 2021 11:00:00'), null, countdown.DAYS|countdown.HOURS|countdown.MINUTES|countdown.SECONDS );
     document.getElementById("days").innerHTML = cd.days;
     document.getElementById("hours").innerHTML = cd.hours;
     document.getElementById("minutes").innerHTML = cd.minutes;
